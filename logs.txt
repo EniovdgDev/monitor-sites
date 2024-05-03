@@ -1,0 +1,12 @@
+02/05/2024 20:36:02 - https://www.amazon.com.br - online: true
+02/05/2024 20:36:02 - https://www.amazon.com.br/thisPageDoestexists - online: false
+02/05/2024 20:36:04 - https://www.linkedin.com.br - online: true
+02/05/2024 20:36:04 - https://www.google.com - online: true
+02/05/2024 20:36:09 - https://www.amazon.com.br - online: true
+02/05/2024 20:36:10 - https://www.amazon.com.br/thisPageDoestexists - online: false
+02/05/2024 20:36:11 - https://www.linkedin.com.br - online: true
+02/05/2024 20:36:12 - https://www.google.com - online: true
+02/05/2024 20:36:18 - https://www.amazon.com.br - online: true
+02/05/2024 20:36:18 - https://www.amazon.com.br/thisPageDoestexists - online: false
+02/05/2024 20:36:19 - https://www.linkedin.com.br - online: true
+02/05/2024 20:36:20 - https://www.google.com - online: true

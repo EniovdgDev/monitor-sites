@@ -28,7 +28,7 @@ func main() {
 		case 1:
 			startMonitoring()
 		case 2:
-			println("Exibindo os logs.")
+			showLogs()
 		case 0:
 			print("Exiting.")
 			os.Exit(0)
@@ -69,7 +69,6 @@ func startMonitoring() {
 		time.Sleep(delay * time.Second)
 		println()
 	}
-	fmt.Println() // just for visual adjustment
 }
 
 func testSite(site string) {
@@ -80,10 +79,8 @@ func testSite(site string) {
 	}
 
 	if resp.StatusCode == 200 {
-		fmt.Println("The site ", site, " was loaded successfully.")
 		registerLog(site, true)
 	} else {
-		fmt.Println("The site ", site, " is in error. Status Code: ", resp.StatusCode)
 		registerLog(site, false)
 	}
 }
@@ -124,4 +121,15 @@ func registerLog(site string, status bool) {
 	arquivo.WriteString(time.Now().Format("02/01/2006 15:04:05 - ") + site + " - online: " + strconv.FormatBool(status) + "\n")
 
 	arquivo.Close()
+}
+
+func showLogs() {
+
+	file, err := os.ReadFile("logs.txt")
+
+	if err != nil {
+		fmt.Println("An error has occurred:", err)
+	}
+
+	fmt.Println(string(file))
 }
